@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "title": "HEED | Soluciones Digitales para PYMEs en México",
+    "description": "Partner Microsoft y proveedor de soluciones en la nube, ERPs, CRMs, licencias Microsoft y servicios RMM con NinjaOne para PYMEs en México."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "cloudSolutions": "Soluciones en la Nube",
+    "microsoftLicenses": "Licencias Microsoft",
+    "rmmServices": "Servicios RMM",
+    "contact": "Contacto",
+    "requestDemo": "Solicitar Demo"
+  },
+  "hero": {
+    "badge": "Partner Microsoft Indirect Reseller",
+    "title": "Digitalizamos tu PYME con soluciones de clase mundial",
+    "subtitle": "Licencias Microsoft, monitoreo remoto y soporte TI para que tu negocio opere con tecnología empresarial.",
+    "ctaPrimary": "Solicitar Demostración",
+    "ctaSecondary": "Conocer Servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones integrales de tecnología para impulsar tu negocio",
+    "cloud": {
+      "title": "Soluciones en la Nube",
+      "subtitle": "ERPs y CRMs",
+      "description": "Implementamos sistemas empresariales en la nube que optimizan tus operaciones, desde gestión financiera hasta relaciones con clientes.",
+      "features": [
+        "Microsoft Dynamics 365 Business Central",
+        "Microsoft Dynamics 365 Sales",
+        "Power Platform y automatizaciones",
+        "Integración con herramientas existentes"
+      ],
+      "cta": "Ver soluciones"
+    },
+    "microsoft": {
+      "title": "Licencias Microsoft",
+      "subtitle": "Indirect Reseller Oficial",
+      "description": "Como partner oficial de Microsoft, ofrecemos licencias originales con el mejor precio y soporte técnico especializado.",
+      "features": [
+        "Microsoft 365 Business",
+        "Windows Server y SQL Server",
+        "Azure Cloud Services",
+        "Licencias por volumen"
+      ],
+      "cta": "Cotizar licencias"
+    },
+    "rmm": {
+      "title": "Servicios RMM",
+      "subtitle": "Monitoreo con NinjaOne",
+      "description": "Monitoreo 24/7, mesa de soporte con tickets, seguridad antivirus y gestión remota para mantener tu operación protegida.",
+      "features": [
+        "Monitoreo 24/7 de equipos y servidores",
+        "Mesa de soporte con sistema de tickets",
+        "Seguridad con soluciones antivirus",
+        "Parches y actualizaciones automáticas"
+      ],
+      "cta": "Solicitar demo RMM"
+    }
+  },
+  "valueProposition": {
+    "title": "¿Por qué elegir HEED?",
+    "subtitle": "Somos más que un proveedor de tecnología, somos tu aliado estratégico",
+    "items": [
+      {
+        "title": "Especialistas en PYMEs",
+        "description": "Entendemos los desafíos únicos de las pequeñas y medianas empresas mexicanas."
+      },
+      {
+        "title": "Partner Microsoft",
+        "description": "Acceso a tecnología de primer nivel con soporte certificado y precios competitivos."
+      },
+      {
+        "title": "Soporte Local",
+        "description": "Equipo en México disponible para atenderte en tu idioma y zona horaria."
+      },
+      {
+        "title": "Implementación Guiada",
+        "description": "Te acompañamos en cada paso, desde la planeación hasta la adopción completa."
+      }
+    ]
+  },
+  "rmmProcess": {
+    "title": "¿Cómo funciona nuestro servicio RMM?",
+    "subtitle": "Un proceso simple y transparente para proteger tu infraestructura de TI",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Diagnóstico Inicial",
+        "description": "Evaluamos tu infraestructura actual, identificamos equipos, servidores y puntos críticos de tu red.",
+        "details": "Nuestro equipo realiza un inventario completo de hardware y software, detectando vulnerabilidades y áreas de mejora."
+      },
+      {
+        "number": "02",
+        "title": "Instalación de Agentes",
+        "description": "Desplegamos los agentes de NinjaOne en todos tus dispositivos sin interrumpir tu operación.",
+        "details": "Proceso silencioso que toma minutos por equipo. Compatible con Windows, Mac y Linux."
+      },
+      {
+        "number": "03",
+        "title": "Configuración y Políticas",
+        "description": "Establecemos alertas personalizadas, políticas de parches y umbrales de rendimiento.",
+        "details": "Definimos qué eventos requieren atención inmediata y automatizamos las actualizaciones de seguridad."
+      },
+      {
+        "number": "04",
+        "title": "Monitoreo Activo 24/7",
+        "description": "Tu infraestructura es monitoreada constantemente desde nuestro centro de operaciones.",
+        "details": "Detectamos y resolvemos problemas antes de que impacten tu negocio. Respuesta promedio de 15 minutos."
+      },
+      {
+        "number": "05",
+        "title": "Reportes y Mejora Continua",
+        "description": "Recibes reportes mensuales con el estado de salud de tu TI y recomendaciones de mejora.",
+        "details": "Visibilidad total de incidentes resueltos, parches aplicados y tendencias de rendimiento."
+      }
+    ],
+    "cta": "Agenda tu diagnóstico gratuito",
+    "guarantee": "Sin compromiso • Evaluación gratuita • Resultados en 48 horas"
+  },
+  "caseStudies": {
+    "title": "Casos de Éxito",
+    "subtitle": "PYMEs mexicanas que transformaron su operación con HEED",
+    "cases": [
+      {
+        "company": "Distribuidora del Norte S.A.",
+        "industry": "Distribución y Logística",
+        "location": "Monterrey, N.L.",
+        "challenge": "Gestión manual de inventario con Excel causaba errores y pérdidas de $50,000 MXN mensuales.",
+        "solution": "Implementación de Dynamics 365 Business Central con automatización de inventarios.",
+        "results": [
+          "Reducción del 95% en errores de inventario",
+          "Ahorro de $45,000 MXN mensuales",
+          "ROI positivo en 4 meses"
+        ],
+        "testimonial": "HEED no solo implementó el sistema, nos acompañó hasta que todo el equipo lo dominaba. Hoy no podemos imaginar operar sin Business Central.",
+        "author": "María González",
+        "role": "Directora de Operaciones"
+      },
+      {
+        "company": "Grupo Médico Integral",
+        "industry": "Servicios de Salud",
+        "location": "Ciudad de México",
+        "challenge": "Caídas constantes del servidor afectaban citas y expedientes de 5,000 pacientes.",
+        "solution": "Migración a Azure con servicio RMM de monitoreo 24/7.",
+        "results": [
+          "99.9% de disponibilidad del sistema",
+          "Cero incidentes críticos en 12 meses",
+          "Reducción del 60% en costos de TI"
+        ],
+        "testimonial": "Antes vivíamos apagando incendios. Con el monitoreo de HEED, los problemas se resuelven antes de que los notemos.",
+        "author": "Dr. Roberto Martínez",
+        "role": "Director General"
+      },
+      {
+        "company": "Textiles Modernos MX",
+        "industry": "Manufactura",
+        "location": "Guadalajara, Jal.",
+        "challenge": "Equipos de producción sin actualizar causaban paros no planeados de 8+ horas semanales.",
+        "solution": "RMM con NinjaOne para monitoreo de equipos industriales y actualización automatizada.",
+        "results": [
+          "Reducción del 90% en paros no planeados",
+          "Aumento del 15% en productividad",
+          "Vida útil de equipos extendida 2 años"
+        ],
+        "testimonial": "El servicio de monitoreo nos da tranquilidad. Sabemos que nuestros equipos están protegidos y optimizados.",
+        "author": "Ing. Carlos Ramírez",
+        "role": "Gerente de Planta"
+      }
+    ],
+    "cta": "Únete a nuestros casos de éxito"
+  },
+  "stats": {
+    "clients": "24/7",
+    "clientsLabel": "Soporte disponible",
+    "uptime": "99.9%",
+    "uptimeLabel": "Disponibilidad garantizada",
+    "response": "15 min",
+    "responseLabel": "Tiempo de respuesta",
+    "experience": "10+",
+    "experienceLabel": "Años de experiencia"
+  },
+  "cta": {
+    "title": "¿Listo para modernizar tu empresa?",
+    "subtitle": "Agenda una demostración gratuita y descubre cómo podemos ayudarte a crecer.",
+    "button": "Solicitar Demostración Gratuita",
+    "note": "Sin compromiso • Respuesta en 24 horas"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos listos para ayudarte a transformar tu negocio",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "company": "Nombre de la empresa",
+      "employees": "Número de empleados",
+      "service": "Servicio de interés",
+      "selectService": "Selecciona un servicio",
+      "message": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado! Te contactaremos pronto.",
+      "error": "Hubo un error. Por favor intenta de nuevo."
+    },
+    "serviceOptions": {
+      "rmm": "Servicios RMM / Monitoreo",
+      "cloud": "Soluciones en la Nube (ERP/CRM)",
+      "licenses": "Licencias Microsoft",
+      "all": "Consulta general"
+    },
+    "info": {
+      "title": "Información de contacto",
+      "email": "contacto@heed.mx",
+      "phone": "+52 (55) 1234-5678",
+      "address": "Ciudad de México, México",
+      "hours": "Lunes a Viernes: 9:00 - 18:00"
+    }
+  },
+  "about": {
+    "title": "Sobre HEED",
+    "subtitle": "Tu socio tecnológico de confianza",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Democratizar el acceso a tecnología empresarial de clase mundial para las PYMEs mexicanas, permitiéndoles competir con las ventajas digitales de las grandes corporaciones."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser el partner tecnológico preferido de las PYMEs en México, reconocidos por nuestra excelencia en servicio y nuestro compromiso con el éxito de nuestros clientes."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "items": [
+        {
+          "title": "Compromiso",
+          "description": "Tu éxito es nuestro éxito. No descansamos hasta ver resultados."
+        },
+        {
+          "title": "Transparencia",
+          "description": "Comunicación clara, precios justos y sin sorpresas."
+        },
+        {
+          "title": "Innovación",
+          "description": "Constantemente buscamos las mejores soluciones para tu negocio."
+        },
+        {
+          "title": "Cercanía",
+          "description": "Somos tu equipo de TI, disponibles cuando nos necesitas."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para trabajar juntos?",
+      "button": "Contáctanos"
+    }
+  },
+  "footer": {
+    "description": "Soluciones digitales integrales para PYMEs en México. Partner Microsoft Indirect Reseller.",
+    "services": "Servicios",
+    "company": "Empresa",
+    "support": "Soporte",
+    "contact": "Contacto",
+    "privacy": "Aviso de Privacidad",
+    "terms": "Términos y Condiciones",
+    "rights": "Todos los derechos reservados.",
+    "helpCenter": "Centro de Ayuda",
+    "createTicket": "Crear Ticket"
+  },
+  "pages": {
+    "rmm": {
+      "ctaLabel": "Solicitar demo gratuita",
+      "featuresTitle": "Todo lo que incluye nuestro servicio RMM",
+      "featuresSubtitle": "Powered by NinjaOne, la plataforma líder en gestión remota de endpoints.",
+      "features": [
+        { "title": "Monitoreo 24/7", "description": "Vigilamos tus equipos y servidores las 24 horas, los 7 días de la semana." },
+        { "title": "Seguridad y antivirus", "description": "Protección integral con soluciones antivirus administradas y actualizadas constantemente." },
+        { "title": "Mesa de soporte y tickets", "description": "Sistema de tickets para reportar y dar seguimiento a incidencias de forma organizada." },
+        { "title": "Soporte remoto", "description": "Resolvemos problemas sin necesidad de visitas presenciales." },
+        { "title": "Parches automáticos", "description": "Mantenemos tus sistemas actualizados con los últimos parches de seguridad." },
+        { "title": "Reportes mensuales", "description": "Informes detallados del estado de salud de tu infraestructura." }
+      ],
+      "portalTitle": "¿Ya eres cliente?",
+      "portalDescription": "Accede al portal de clientes para monitorear tus equipos, crear tickets de soporte y consultar reportes.",
+      "portalButton": "Acceder al Portal",
+      "pricingTitle": "Planes de servicio",
+      "pricingSubtitle": "Elige el plan que mejor se adapte a tu empresa",
+      "mostPopular": "Más popular",
+      "requestQuote": "Solicitar cotización",
+      "plans": [
+        {
+          "name": "Básico",
+          "description": "Para pequeñas empresas",
+          "devices": "Hasta 25 dispositivos",
+          "features": ["Monitoreo 24/7", "Alertas por email", "Parches de seguridad", "Reporte mensual"]
+        },
+        {
+          "name": "Profesional",
+          "description": "Para empresas en crecimiento",
+          "devices": "Hasta 100 dispositivos",
+          "features": ["Todo lo del plan Básico", "Soporte prioritario", "Automatizaciones avanzadas", "Dashboard personalizado", "Inventario de activos"]
+        },
+        {
+          "name": "Empresarial",
+          "description": "Para grandes operaciones",
+          "devices": "Dispositivos ilimitados",
+          "features": ["Todo lo del plan Profesional", "SLA garantizado", "Ingeniero dedicado", "Integraciones personalizadas", "Reportes ejecutivos"]
+        }
+      ]
+    },
+    "microsoft": {
+      "catalogTitle": "Catálogo de licencias",
+      "licenses": [
+        {
+          "category": "Microsoft 365",
+          "products": ["Microsoft 365 Business Basic", "Microsoft 365 Business Standard", "Microsoft 365 Business Premium", "Microsoft 365 Apps"]
+        },
+        {
+          "category": "Windows Server",
+          "products": ["Windows Server Standard", "Windows Server Datacenter", "CALs de Usuario/Dispositivo", "Remote Desktop Services"]
+        },
+        {
+          "category": "SQL Server",
+          "products": ["SQL Server Standard", "SQL Server Enterprise", "Licencias por Core", "CALs de SQL Server"]
+        },
+        {
+          "category": "Azure",
+          "products": ["Azure Subscriptions", "Azure Reserved Instances", "Azure Hybrid Benefit", "Azure Active Directory"]
+        }
+      ],
+      "advantagesTitle": "Ventajas de comprar con nosotros",
+      "advantages": [
+        { "title": "Precios competitivos", "description": "Accede a tarifas preferenciales como Indirect Reseller de Microsoft." },
+        { "title": "Licencias originales", "description": "100% legales con soporte oficial de Microsoft." },
+        { "title": "Asesoría especializada", "description": "Te ayudamos a elegir las licencias correctas para tu negocio." },
+        { "title": "Gestión centralizada", "description": "Administramos todas tus licencias desde un solo lugar." },
+        { "title": "Soporte técnico premium", "description": "Asistencia especializada para resolver cualquier duda o incidencia con tus licencias." },
+        { "title": "Planes de pago flexibles", "description": "Diferentes esquemas de pago que se ajustan a cualquier tipo y tamaño de empresa." }
+      ],
+      "ctaTitle": "¿Necesitas cotizar licencias?",
+      "ctaDescription": "Envíanos tu lista de requerimientos y te responderemos con una cotización personalizada en menos de 24 horas.",
+      "ctaButton": "Solicitar cotización"
+    },
+    "cloud": {
+      "solutionsTitle": "Soluciones que implementamos",
+      "solutions": [
+        { "name": "Microsoft Dynamics 365 Business Central", "description": "ERP completo para gestión financiera, ventas, compras, inventario y operaciones." },
+        { "name": "Microsoft Dynamics 365 Sales", "description": "CRM potente para gestionar relaciones con clientes, oportunidades y ventas." },
+        { "name": "Power Platform", "description": "Automatiza procesos, crea aplicaciones y analiza datos con Power Apps, Power Automate y Power BI." }
+      ],
+      "benefitsTitle": "Beneficios de migrar a la nube",
+      "benefits": [
+        "Acceso desde cualquier lugar con conexión a internet",
+        "Actualizaciones automáticas y seguridad garantizada",
+        "Escalabilidad según el crecimiento de tu negocio",
+        "Integración nativa con Microsoft 365",
+        "Respaldos automáticos en la nube de Azure",
+        "Soporte técnico especializado en México"
+      ],
+      "whyUsTitle": "¿Por qué elegirnos?",
+      "whyUsDescription": "Somos expertos certificados en implementación de soluciones Microsoft. Te acompañamos desde el análisis inicial hasta la adopción completa por tu equipo.",
+      "ctaButton": "Solicitar consulta gratuita"
+    }
+  }
+}
