@@ -109,8 +109,8 @@ export default async function TermsPage({
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">12. Contacto</h2>
                 <p className="text-dark-600 mb-6">
                   Para cualquier consulta sobre estos términos:<br />
-                  <strong>Email:</strong> <a href="mailto:legal@heed.mx" className="text-primary-600 hover:underline">legal@heed.mx</a><br />
-                  <strong>Teléfono:</strong> +52 (55) 1234-5678
+                  <strong>Email:</strong> <a href="mailto:contacto@heed.mx" className="text-primary-600 hover:underline">contacto@heed.mx</a><br />
+                  <strong>Teléfono:</strong> +52 1 55 8644 3982
                 </p>
               </>
             ) : (
@@ -186,8 +186,8 @@ export default async function TermsPage({
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">12. Contact</h2>
                 <p className="text-dark-600 mb-6">
                   For any questions about these terms:<br />
-                  <strong>Email:</strong> <a href="mailto:legal@heed.mx" className="text-primary-600 hover:underline">legal@heed.mx</a><br />
-                  <strong>Phone:</strong> +52 (55) 1234-5678
+                  <strong>Email:</strong> <a href="mailto:contacto@heed.mx" className="text-primary-600 hover:underline">contacto@heed.mx</a><br />
+                  <strong>Phone:</strong> +52 1 55 8644 3982
                 </p>
               </>
             )}

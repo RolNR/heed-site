@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { IconLinkedIn, IconFacebook, IconMail, IconPhone, IconLocation, IconMicrosoft } from '@/components/ui';
+import { IconFacebook, IconMail, IconPhone, IconLocation, IconMicrosoft } from '@/components/ui';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -31,15 +31,6 @@ export default function Footer() {
             </p>
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a
-                href="https://linkedin.com/company/heed"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-dark-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <IconLinkedIn size={20} />
-              </a>
               <a
                 href="https://facebook.com/heedmx"
                 target="_blank"
@@ -134,8 +125,8 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <IconPhone size={20} className="text-primary-500 mt-0.5 flex-shrink-0" />
-                <a href="tel:+525512345678" className="text-dark-300 hover:text-white transition-colors text-sm">
-                  +52 (55) 1234-5678
+                <a href="tel:+5215586443982" className="text-dark-300 hover:text-white transition-colors text-sm">
+                  +52 1 55 8644 3982
                 </a>
               </li>
               <li className="flex items-start space-x-3">

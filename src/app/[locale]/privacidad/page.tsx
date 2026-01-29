@@ -71,7 +71,7 @@ export default async function PrivacyPage({
 
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">5. Derechos ARCO</h2>
                 <p className="text-dark-600 mb-6">
-                  Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse (derechos ARCO) al tratamiento de sus datos personales. Para ejercer estos derechos, envíe su solicitud a: <a href="mailto:privacidad@heed.mx" className="text-primary-600 hover:underline">privacidad@heed.mx</a>
+                  Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse (derechos ARCO) al tratamiento de sus datos personales. Para ejercer estos derechos, envíe su solicitud a: <a href="mailto:contacto@heed.mx" className="text-primary-600 hover:underline">contacto@heed.mx</a>
                 </p>
 
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">6. Uso de Cookies</h2>
@@ -87,8 +87,8 @@ export default async function PrivacyPage({
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">8. Contacto</h2>
                 <p className="text-dark-600 mb-6">
                   Para cualquier duda o comentario sobre este aviso de privacidad, contáctenos en:<br />
-                  <strong>Email:</strong> <a href="mailto:privacidad@heed.mx" className="text-primary-600 hover:underline">privacidad@heed.mx</a><br />
-                  <strong>Teléfono:</strong> +52 (55) 1234-5678
+                  <strong>Email:</strong> <a href="mailto:contacto@heed.mx" className="text-primary-600 hover:underline">contacto@heed.mx</a><br />
+                  <strong>Teléfono:</strong> +52 1 55 8644 3982
                 </p>
               </>
             ) : (
@@ -126,7 +126,7 @@ export default async function PrivacyPage({
 
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">5. ARCO Rights</h2>
                 <p className="text-dark-600 mb-6">
-                  You have the right to Access, Rectify, Cancel or Oppose (ARCO rights) the processing of your personal data. To exercise these rights, send your request to: <a href="mailto:privacy@heed.mx" className="text-primary-600 hover:underline">privacy@heed.mx</a>
+                  You have the right to Access, Rectify, Cancel or Oppose (ARCO rights) the processing of your personal data. To exercise these rights, send your request to: <a href="mailto:contacto@heed.mx" className="text-primary-600 hover:underline">contacto@heed.mx</a>
                 </p>
 
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">6. Use of Cookies</h2>
@@ -142,8 +142,8 @@ export default async function PrivacyPage({
                 <h2 className="text-2xl font-bold text-dark-900 mb-4">8. Contact</h2>
                 <p className="text-dark-600 mb-6">
                   For any questions or comments about this privacy policy, contact us at:<br />
-                  <strong>Email:</strong> <a href="mailto:privacy@heed.mx" className="text-primary-600 hover:underline">privacy@heed.mx</a><br />
-                  <strong>Phone:</strong> +52 (55) 1234-5678
+                  <strong>Email:</strong> <a href="mailto:contacto@heed.mx" className="text-primary-600 hover:underline">contacto@heed.mx</a><br />
+                  <strong>Phone:</strong> +52 1 55 8644 3982
                 </p>
               </>
             )}
