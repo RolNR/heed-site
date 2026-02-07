@@ -189,6 +189,11 @@
     "note": "Sin compromiso • Respuesta en 24 horas"
   },
   "contact": {
+    "metadata": {
+      "title": "Contacto | Solicita una Demostración Gratuita",
+      "description": "Contáctanos para una demostración gratuita de nuestras soluciones. Licencias Microsoft, monitoreo RMM y ERPs en la nube para tu PYME.",
+      "keywords": "contacto HEED, demostración gratuita, cotización Microsoft, soporte TI México"
+    },
     "title": "Contáctanos",
     "subtitle": "Estamos listos para ayudarte a transformar tu negocio",
     "form": {
@@ -220,6 +225,11 @@
     }
   },
   "about": {
+    "metadata": {
+      "title": "Nosotros | Partner Tecnológico de Confianza",
+      "description": "Conoce HEED, tu socio tecnológico de confianza. Democratizamos el acceso a tecnología empresarial de clase mundial para PYMEs en México.",
+      "keywords": "HEED México, partner tecnológico, Microsoft Partner, soluciones TI PYMEs, soporte TI México"
+    },
     "title": "Sobre HEED",
     "subtitle": "Tu socio tecnológico de confianza",
     "mission": {
@@ -270,6 +280,11 @@
   },
   "pages": {
     "rmm": {
+      "metadata": {
+        "title": "Servicios RMM con NinjaOne | Monitoreo 24/7",
+        "description": "Monitoreo remoto 24/7, mesa de soporte con tickets, seguridad antivirus y gestión de parches con NinjaOne para PYMEs en México.",
+        "keywords": "RMM México, NinjaOne, monitoreo remoto, soporte TI, mesa de ayuda, parches automáticos, antivirus empresarial"
+      },
       "ctaLabel": "Solicitar demo gratuita",
       "featuresTitle": "Todo lo que incluye nuestro servicio RMM",
       "featuresSubtitle": "Powered by NinjaOne, la plataforma líder en gestión remota de endpoints.",
@@ -310,6 +325,11 @@
       ]
     },
     "microsoft": {
+      "metadata": {
+        "title": "Licencias Microsoft | Reseller Oficial",
+        "description": "Licencias originales de Microsoft 365, Windows Server, SQL Server y Azure. Precios competitivos como Indirect Reseller autorizado para PYMEs en México.",
+        "keywords": "licencias Microsoft, Microsoft 365, Windows Server, SQL Server, Azure, reseller México, licencias por volumen"
+      },
       "catalogTitle": "Catálogo de licencias",
       "licenses": [
         {
@@ -343,6 +363,11 @@
       "ctaButton": "Solicitar cotización"
     },
     "cloud": {
+      "metadata": {
+        "title": "Soluciones en la Nube | ERP y CRM Microsoft",
+        "description": "Implementación de Microsoft Dynamics 365 Business Central y Sales. ERPs y CRMs en la nube para optimizar las operaciones de tu PYME en México.",
+        "keywords": "ERP nube México, CRM Microsoft, Dynamics 365 Business Central, Dynamics 365 Sales, Power Platform, soluciones nube PYMEs"
+      },
       "solutionsTitle": "Soluciones que implementamos",
       "solutions": [
         { "name": "Microsoft Dynamics 365 Business Central", "description": "ERP completo para gestión financiera, ventas, compras, inventario y operaciones." },

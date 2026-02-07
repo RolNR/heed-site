@@ -189,6 +189,11 @@
     "note": "No commitment • Response within 24 hours"
   },
   "contact": {
+    "metadata": {
+      "title": "Contact | Request a Free Demo",
+      "description": "Contact us for a free demo of our solutions. Microsoft licenses, RMM monitoring and cloud ERPs for your SMB.",
+      "keywords": "contact HEED, free demo, Microsoft quote, IT support Mexico"
+    },
     "title": "Contact Us",
     "subtitle": "We're ready to help you transform your business",
     "form": {
@@ -220,6 +225,11 @@
     }
   },
   "about": {
+    "metadata": {
+      "title": "About Us | Trusted Technology Partner",
+      "description": "Meet HEED, your trusted technology partner. We democratize access to world-class enterprise technology for SMBs in Mexico.",
+      "keywords": "HEED Mexico, technology partner, Microsoft Partner, IT solutions SMBs, IT support Mexico"
+    },
     "title": "About HEED",
     "subtitle": "Your trusted technology partner",
     "mission": {
@@ -270,6 +280,11 @@
   },
   "pages": {
     "rmm": {
+      "metadata": {
+        "title": "RMM Services with NinjaOne | 24/7 Monitoring",
+        "description": "24/7 remote monitoring, help desk with ticketing, antivirus security and patch management with NinjaOne for SMBs in Mexico.",
+        "keywords": "RMM Mexico, NinjaOne, remote monitoring, IT support, help desk, automatic patches, enterprise antivirus"
+      },
       "ctaLabel": "Request free demo",
       "featuresTitle": "Everything included in our RMM service",
       "featuresSubtitle": "Powered by NinjaOne, the leading platform for remote endpoint management.",
@@ -310,6 +325,11 @@
       ]
     },
     "microsoft": {
+      "metadata": {
+        "title": "Microsoft Licenses | Official Reseller",
+        "description": "Original Microsoft 365, Windows Server, SQL Server and Azure licenses. Competitive pricing as an authorized Indirect Reseller for SMBs in Mexico.",
+        "keywords": "Microsoft licenses, Microsoft 365, Windows Server, SQL Server, Azure, reseller Mexico, volume licensing"
+      },
       "catalogTitle": "License Catalog",
       "licenses": [
         {
@@ -343,6 +363,11 @@
       "ctaButton": "Request quote"
     },
     "cloud": {
+      "metadata": {
+        "title": "Cloud Solutions | Microsoft ERP & CRM",
+        "description": "Implementation of Microsoft Dynamics 365 Business Central and Sales. Cloud ERPs and CRMs to optimize your SMB operations in Mexico.",
+        "keywords": "cloud ERP Mexico, Microsoft CRM, Dynamics 365 Business Central, Dynamics 365 Sales, Power Platform, cloud solutions SMBs"
+      },
       "solutionsTitle": "Solutions we implement",
       "solutions": [
         { "name": "Microsoft Dynamics 365 Business Central", "description": "Complete ERP for financial management, sales, purchasing, inventory and operations." },

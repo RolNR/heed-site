@@ -1,6 +1,19 @@
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { PageHeader, Section, SectionHeader, Button, Card, FeatureList, IconMicrosoft, IconServer, IconDatabase, IconCloud } from '@/components/ui';
+import { getPageMetadata } from '@/lib/seo';
+import JsonLd, { createServiceSchema } from '@/components/seo/JsonLd';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata({ locale, path: '/servicios/licencias-microsoft', translationKey: 'pages.microsoft' });
+}
+
+const microsoftServiceSchema = createServiceSchema({
+  name: 'Licencias Microsoft - Indirect Reseller Oficial',
+  description: 'Licencias originales de Microsoft 365, Windows Server, SQL Server y Azure con precios competitivos para PYMEs en México.',
+  url: 'https://heed.mx/servicios/licencias-microsoft',
+});
 
 const licenseIcons = [
   <IconMicrosoft key="0" size={32} />,
@@ -18,6 +31,7 @@ function MicrosoftLicensesContent() {
 
   return (
     <div className="pt-20">
+      <JsonLd data={microsoftServiceSchema} />
       <PageHeader
         gradient="orange"
         badge={t('subtitle')}

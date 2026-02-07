@@ -1,6 +1,12 @@
 import { Suspense } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import ContactForm from './ContactForm';
+import { getPageMetadata } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata({ locale, path: '/contacto', translationKey: 'contact' });
+}
 
 export default async function ContactPage({
   params

@@ -1,6 +1,19 @@
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { PageHeader, Section, SectionHeader, Button, Card, CardIcon, CardTitle, CardContent, FeatureList, IconCurrency, IconUsers, IconBolt } from '@/components/ui';
+import { getPageMetadata } from '@/lib/seo';
+import JsonLd, { createServiceSchema } from '@/components/seo/JsonLd';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata({ locale, path: '/servicios/soluciones-nube', translationKey: 'pages.cloud' });
+}
+
+const cloudServiceSchema = createServiceSchema({
+  name: 'Soluciones en la Nube - ERP y CRM Microsoft',
+  description: 'Implementación de Microsoft Dynamics 365 Business Central y Sales para optimizar las operaciones de PYMEs en México.',
+  url: 'https://heed.mx/servicios/soluciones-nube',
+});
 
 const solutionIcons = [
   <IconCurrency key="0" size={32} />,
@@ -17,6 +30,7 @@ function CloudSolutionsContent() {
 
   return (
     <div className="pt-20">
+      <JsonLd data={cloudServiceSchema} />
       <PageHeader
         gradient="blue"
         badge={t('subtitle')}

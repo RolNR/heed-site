@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import JsonLd, { organizationSchema } from '@/components/seo/JsonLd';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -61,11 +62,20 @@ export async function generateMetadata({
       siteName: 'HEED',
       locale: locale === 'es' ? 'es_MX' : 'en_US',
       type: 'website',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'HEED - Soluciones Digitales para PYMEs en México',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: metadata.title,
       description: metadata.description,
+      images: ['/og-image.png'],
     },
     robots: {
       index: true,
@@ -102,6 +112,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
+      <head>
+        <JsonLd data={organizationSchema} />
+      </head>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
           <Header />

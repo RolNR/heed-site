@@ -3,6 +3,19 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { PageHeader, Section, SectionHeader, Card, CardIcon, IconClock, IconShield, IconBell, IconMonitor, IconList, IconChart, IconCheck, IconArrowRight } from '@/components/ui';
 import RMMProcess from '@/components/sections/RMMProcess';
+import { getPageMetadata } from '@/lib/seo';
+import JsonLd, { createServiceSchema } from '@/components/seo/JsonLd';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata({ locale, path: '/servicios/rmm', translationKey: 'pages.rmm' });
+}
+
+const rmmServiceSchema = createServiceSchema({
+  name: 'Servicios RMM con NinjaOne',
+  description: 'Monitoreo remoto 24/7, mesa de soporte con tickets, seguridad antivirus y gestión de parches para PYMEs en México.',
+  url: 'https://heed.mx/servicios/rmm',
+});
 
 const featureIcons = [
   <IconClock key="0" size={32} />,
@@ -27,6 +40,7 @@ function RMMServicesContent() {
 
   return (
     <div className="pt-20">
+      <JsonLd data={rmmServiceSchema} />
       <PageHeader
         gradient="green"
         badge={t('subtitle')}
