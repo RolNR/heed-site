@@ -46,9 +46,19 @@ export async function POST(request: Request) {
       }),
     });
 
+    if (!web3Response.ok) {
+      const text = await web3Response.text();
+      console.error('Web3Forms error:', web3Response.status, text);
+      return NextResponse.json(
+        { success: false, message: 'Error al enviar el formulario' },
+        { status: 500 },
+      );
+    }
+
     const web3Result = await web3Response.json();
 
     if (!web3Result.success) {
+      console.error('Web3Forms rejected:', web3Result);
       return NextResponse.json(
         { success: false, message: 'Error al enviar el formulario' },
         { status: 500 },
@@ -71,8 +81,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact API error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
-      { success: false, message: 'Error interno del servidor' },
+      { success: false, message: 'Error interno del servidor', error: errorMessage },
       { status: 500 },
     );
   }
