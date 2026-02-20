@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { buildAutoReplyHtml } from '@/lib/email-template';
+import { buildAutoReplyHtml, buildNotificationHtml } from '@/lib/email-template';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+const NOTIFICATION_EMAIL = 'contacto@heed.mx';
 
 const SERVICE_LABELS: Record<string, string> = {
   rmm: 'Servicios RMM / Monitoreo',
@@ -25,47 +27,24 @@ export async function POST(request: Request) {
 
     const serviceLabel = SERVICE_LABELS[service] || service;
 
-    // 1. Send to Web3Forms (internal notification)
-    const web3Response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-        subject: `Nuevo contacto HEED: ${name} - ${serviceLabel}`,
-        from_name: 'HEED Website',
-        Nombre: name,
-        Email: email,
-        'Teléfono': phone || 'No proporcionado',
-        Empresa: company,
-        Empleados: employees || 'No especificado',
-        Servicio: serviceLabel,
-        Mensaje: message || 'Sin mensaje adicional',
+    // 1. Send notification email to HEED
+    await resend.emails.send({
+      from: 'HEED Website <contacto@heed.mx>',
+      to: [NOTIFICATION_EMAIL],
+      replyTo: email,
+      subject: `Nuevo contacto HEED: ${name} - ${serviceLabel}`,
+      html: buildNotificationHtml({
+        name,
+        email,
+        phone: phone || 'No proporcionado',
+        company,
+        employees: employees || 'No especificado',
+        service: serviceLabel,
+        message,
       }),
     });
 
-    if (!web3Response.ok) {
-      const text = await web3Response.text();
-      console.error('Web3Forms error:', web3Response.status, text);
-      return NextResponse.json(
-        { success: false, message: 'Error al enviar el formulario' },
-        { status: 500 },
-      );
-    }
-
-    const web3Result = await web3Response.json();
-
-    if (!web3Result.success) {
-      console.error('Web3Forms rejected:', web3Result);
-      return NextResponse.json(
-        { success: false, message: 'Error al enviar el formulario' },
-        { status: 500 },
-      );
-    }
-
-    // 2. Send auto-reply via Resend
+    // 2. Send auto-reply to the client
     try {
       await resend.emails.send({
         from: 'HEED <contacto@heed.mx>',
@@ -74,7 +53,7 @@ export async function POST(request: Request) {
         html: buildAutoReplyHtml({ name, service: serviceLabel, company }),
       });
     } catch (emailError) {
-      // Log but don't fail the request — the form was already submitted
+      // Log but don't fail the request — the notification was already sent
       console.error('Error sending auto-reply email:', emailError);
     }
 
