@@ -32,32 +32,13 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus('submitting');
 
-    const serviceLabels: Record<string, string> = {
-      rmm: 'Servicios RMM / Monitoreo',
-      cloud: 'Soluciones en la Nube (ERP/CRM)',
-      licenses: 'Licencias Microsoft',
-      all: 'Consulta general',
-    };
-
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
         },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          subject: `Nuevo contacto HEED: ${formData.name} - ${serviceLabels[formData.service] || formData.service}`,
-          from_name: 'HEED Website',
-          Nombre: formData.name,
-          Email: formData.email,
-          Teléfono: formData.phone || 'No proporcionado',
-          Empresa: formData.company,
-          Empleados: formData.employees || 'No especificado',
-          Servicio: serviceLabels[formData.service] || formData.service,
-          Mensaje: formData.message || 'Sin mensaje adicional',
-        }),
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
