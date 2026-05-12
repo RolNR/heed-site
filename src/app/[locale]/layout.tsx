@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd, { organizationSchema } from '@/components/seo/JsonLd';
+import { PostHogProvider } from '@/components/analytics/posthog-provider';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -116,13 +117,15 @@ export default async function LocaleLayout({
         <JsonLd data={organizationSchema} />
       </head>
       <body className="min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
+        <PostHogProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </NextIntlClientProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
