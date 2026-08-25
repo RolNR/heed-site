@@ -64,6 +64,7 @@ export default function Button({
     );
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- strip href so it can't leak onto the native <button>
   const { href, ...buttonProps } = props as ButtonAsButtonProps;
   return (
     <button className={combinedStyles} {...buttonProps}>
