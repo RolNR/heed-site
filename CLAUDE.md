@@ -78,3 +78,19 @@ public/                # Assets estáticos
 ### Commits
 
 - Seguir el estilo del historial: `feat(scope):`, `fix(scope):`, `refactor(scope):`, etc.
+- Un cambio lógico por commit (no mezclar docs + fixes + features en uno solo).
+
+### Lint
+
+- `npm run lint` corre sobre `eslint.config.mjs` (flat config, `next/core-web-vitals` + `next/typescript`). Antes de que este archivo existiera, `next lint` caía en un wizard interactivo que se cuelga fuera de una terminal (CI, hooks, agentes) — si algún día se borra o rompe este archivo, restaurarlo en vez de dejar que el wizard decida.
+
+### API `/api/contact`
+
+- Tiene rate limiting en memoria (5 req / 10 min por IP) y un campo honeypot (`website`) en `ContactForm.tsx` — no quitarlos sin reemplazo equivalente, es la única protección anti-spam del formulario público.
+- El rate limiter es en memoria por instancia (se resetea en cold start); es suficiente para el tráfico actual pero no es a prueba de instancias múltiples. Si el tráfico crece, migrar a un store compartido (Upstash Redis vía Vercel Marketplace) en vez de escalar el Map.
+- Los errores 500 nunca deben devolver el mensaje crudo del error al cliente (ver `catch` en `route.ts`) — solo loguear server-side.
+
+## Pendientes conocidos (actualizado 2026-08-25)
+
+- **`CaseStudies.tsx` / `messages/{es,en}.json` → `caseStudies.cases`**: los 3 casos de éxito (Distribuidora del Norte, Grupo Médico Integral, Textiles Modernos MX) tienen nombres, cifras y testimonios que parecen ficticios, no clientes reales de HEED. Publicar prueba social inventada con nombres propios es riesgoso — reemplazar con casos reales o quitar la sección hasta tenerlos.
+- **Footer / redes sociales**: solo hay link a Facebook, a propósito — no agregar LinkedIn hasta tener un plan de contenido/publicaciones para esa red (decisión explícita del usuario, no un olvido).
