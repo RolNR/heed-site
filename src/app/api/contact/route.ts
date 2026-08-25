@@ -13,10 +13,38 @@ const SERVICE_LABELS: Record<string, string> = {
   all: 'Consulta general',
 };
 
+// In-memory sliding-window limiter. Resets on cold start, but Fluid Compute
+// reuses warm instances, so this still catches sustained bursts from one IP.
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const requestLog = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (requestLog.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  timestamps.push(now);
+  requestLog.set(ip, timestamps);
+  return timestamps.length > RATE_LIMIT_MAX;
+}
+
 export async function POST(request: Request) {
   try {
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 'unknown';
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { success: false, message: 'Demasiadas solicitudes, intenta de nuevo más tarde' },
+        { status: 429 },
+      );
+    }
+
     const body = await request.json();
-    const { name, email, phone, company, employees, service, message } = body;
+    const { name, email, phone, company, employees, service, message, website } = body;
+
+    // Honeypot: real users never fill this hidden field, bots do.
+    // Report success so bots don't learn to skip the field.
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !email || !company || !service) {
       return NextResponse.json(
@@ -60,9 +88,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact API error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
-      { success: false, message: 'Error interno del servidor', error: errorMessage },
+      { success: false, message: 'Error interno del servidor' },
       { status: 500 },
     );
   }

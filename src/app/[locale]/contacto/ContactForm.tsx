@@ -15,6 +15,7 @@ export default function ContactForm() {
     employees: '',
     service: '',
     message: '',
+    website: '', // honeypot — left empty by real users, hidden from view below
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
@@ -54,6 +55,7 @@ export default function ContactForm() {
             employees: '',
             service: '',
             message: '',
+            website: '',
           });
           setStatus('idle');
         }, 3000);
@@ -96,6 +98,20 @@ export default function ContactForm() {
             <div className="lg:col-span-2">
               <div className="card p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field — hidden from real users, catches bots that autofill every input */}
+                  <div className="absolute -left-[9999px]" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input
+                      type="text"
+                      id="website"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.website}
+                      onChange={handleChange}
+                    />
+                  </div>
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-dark-700 mb-2">
